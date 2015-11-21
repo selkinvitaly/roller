@@ -68,7 +68,7 @@ You need to associate the link with the "rolling" area through attributes `data-
 
 Now `UL` element will emit the event.
 
-##API and options
+## <a name="settings"></a>API and options
 
 **API**:
 * `init()` - Initialization method. For more details see [below] (#loading);
