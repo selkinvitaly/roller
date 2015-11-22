@@ -111,7 +111,7 @@ function resourcesLoaded(resources, callback) {
 If you want the class recalculate the coordinates after each resizing window that you may attach handler on `resize` event:
 
 ```js
-var roller = new Roller();
+...
 var handlerResized = throttle(function() {
   roller.resized = true;
 }, 500);
