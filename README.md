@@ -85,7 +85,7 @@ Now `UL` element will emit the event.
 * `detail.link` - the current link. This element has the attribute `"data-roller-link"`;
 * `detail.area` - the current area. This element has the attribute `"data-roller-area"`.
 
-**Note** these properties will be `null` If the current area isn't "rolling" area (hasn't attribute `data-roller-area`)! See (example)[./example/index.html].
+**Note** these properties will be `null` If the current area isn't "rolling" area (hasn't attribute `data-roller-area`)! See [example](./example/index.html).
 
 ## <a name="loading"></a>When I initialize the class?
 
