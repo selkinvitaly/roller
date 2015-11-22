@@ -1,0 +1,30 @@
+{
+  "name": "roller",
+  "version": "0.0.1",
+  "description": "Rolling class for a web page",
+  "main": "src/entry.js",
+  "author": {
+    "name": "Selkin Vitaly",
+    "email": "contact@selkinvitaly.ru"
+  },
+  "scripts": {
+    "build": "npm install && NODE_ENV=production webpack",
+    "watch": "webpack"
+  },
+  "homepage": "https://github.com/selkinvitaly/roller/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/selkinvitaly/roller.git"
+  },
+  "keywords": [
+    "scrolling",
+    "roller",
+    "components"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "node-static": "^0.7.7",
+    "webpack": "^1.12.8"
+  },
+  "private": false
+}
