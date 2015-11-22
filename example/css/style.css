@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#menu {
+  background: #A6E;
+  padding: .5em;
+  color: white;
+  position: fixed;
+  left: 100px;
+  top: 0;
+}
+
+#menu li {
+  display: inline-block;
+}
+
+#menu li a {
+  color: inherit;
+  transition: color .5s;
+}
+
+#menu li a.active {
+  color: orange;
+}
+
+#first {
+  background: #3B3B3B;
+  color: white;
+  height: 300px;
+}
+
+#second {
+  height: 400px;
+}
+
+#third {
+  background: #AAAA7F;
+  height: 350px;
+}
+
+#fourth {
+  background: #057;
+  height: 500px;
+}
+
+#fifth {
+  background: black;
+  height: 80px;
+  color: white;
+}

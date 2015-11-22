@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>test</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="../dist/roller.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var roller = new Roller();
+
+      document.addEventListener("rolling", handler);
+
+      roller.init();
+
+      function handler(event) {
+        var link      = event.detail.link;
+        var className = "active";
+
+        resetClass(className);
+        if (link) {
+          link.classList.add(className);
+        }
+      }
+
+      function resetClass(className) {
+        Array.prototype.forEach.call(document.querySelectorAll("a"), function(link) {
+          link.classList.remove(className);
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <nav id="menu">
+    <ul>
+      <li><a data-roller-link="first" href="#first">first</a></li>
+      <li><a data-roller-link="second" href="#second">second</a></li>
+      <li><a data-roller-link="third" href="#third">third</a></li>
+      <li><a data-roller-link="fourth" href="#fourth">fourth</a></li>
+      <li><a data-roller-link="fifth" href="#fifth">fifth</a></li>
+    </ul>
+  </nav>
+  <section id="first" data-roller-area="first">first area</section>
+  <section id="second" data-roller-area="second">second area</section>
+  <section id="third" data-roller-area="third">third area</section>
+  <section id="fourth" data-roller-area="fourth">fourth area</section>
+  <section id="fifth" data-roller-area="fifth">fifth area</section>
+</body>
+</html>
