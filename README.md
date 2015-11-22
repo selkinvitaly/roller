@@ -72,13 +72,20 @@ Now `UL` element will emit the event.
 
 **API**:
 * `init()` - Initialization method. For more details see [below] (#loading);
-* `resized` - It has `null` before the initialization of the class. It has `true` If there was resizing window, else `false`;
+* `resized` - It has `null` before the initialization of the class. It has `true` If there was resizing window, else `false`.
 
 **Constructor options**:
 * `attributeLink` - string the attribute name for the link. Default: `"data-roller-link"`;
 * `attributeArea` - string the attribute name for the area. Default: `"data-roller-area"`;
 * `attributeWhere` - string the attribute name for the emitted element. Default: `"data-roller-where"`;
-* `nameEvent` - the name of emitted event. Default: `"rolling"`;
+* `nameEvent` - the name of emitted event. Default: `"rolling"`.
+
+**Event**:
+* `detail.name` - the name of the current area. You specified this name into the attributtes `"data-roller-area"` and `"data-roller-link"`;
+* `detail.link` - the current link. This element has the attribute `"data-roller-link"`;
+* `detail.area` - the current area. This element has the attribute `"data-roller-area"`.
+
+**Note** these properties will be `null` If the current area isn't "rolling" area (hasn't attribute `data-roller-area`)! See (example)[./example/index.html].
 
 ## <a name="loading"></a>When I initialize the class?
 
