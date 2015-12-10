@@ -105,7 +105,7 @@ module.exports.prototype._checkCalculated = function(elements) {
 
   if (resized || resized === null) {
     this._calcAllCoordinates(elements);
-    this._resized = true;
+    this.resized = true;
   }
 };
 
