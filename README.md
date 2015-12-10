@@ -155,13 +155,7 @@ function throttle(doSomething, ms) {
 
 ## <a name="building"></a>Building
 
-This class is built using [webpack](http://webpack.github.io/), so you need to install it:
-
-```sh
-npm i -g webpack
-```
-
-Run this command after cloning the repository from the cloned folder:
+This class is built using [webpack](http://webpack.github.io/). You just need to run this command after cloning the repository from the cloned folder:
 
 ```sh
 npm run build
