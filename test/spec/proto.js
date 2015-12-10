@@ -34,4 +34,20 @@
 
   });
 
+  // Roller.prototype._checkCalculated()
+  describe("Method _checkCalculated", function() {
+
+    it("calls the method _calcAllCoordinates and sets the resized flag", function() {
+      let elements = {};
+
+      spyOn(roller, "_calcAllCoordinates");
+
+      roller._checkCalculated(elements);
+
+      expect(roller.resized).toBe(true);
+      expect(roller._calcAllCoordinates).toHaveBeenCalledWith(elements);
+    });
+
+  });
+
 }(window.Roller));
