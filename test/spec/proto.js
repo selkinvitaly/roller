@@ -50,4 +50,49 @@
 
   });
 
+  // Roller.prototype._getNameCurrentArea()
+  describe("Method _getNameCurrentArea", function() {
+
+    it("returns the current name of the area", function() {
+      let elements = {
+        nameArea: {
+          pageY: {
+            top: 0,
+            bottom: 100
+          }
+        }
+      };
+
+      let name = roller._getNameCurrentArea(elements);
+
+      expect(name).toBe("nameArea");
+    });
+
+    it("doesn't return the current name of the area", function() {
+      let elements  = {
+        nameArea: {
+          pageY: {
+            top: 0,
+            bottom: 0
+          }
+        }
+      };
+      let elements2 = {
+        nameArea: {
+          pageY: {
+            top: 1,
+            bottom: 100
+          }
+        }
+      };
+
+      let name  = roller._getNameCurrentArea(elements);
+      let name2 = roller._getNameCurrentArea(elements2);
+
+      expect(name).toBeNull();
+      expect(name2).toBeNull();
+    });
+
+  });
+
 }(window.Roller));
