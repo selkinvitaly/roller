@@ -95,4 +95,47 @@
 
   });
 
+  // Roller.prototype._calcAllCoordinates()
+  describe("Method _calcAllCoordinates", function() {
+    let append, remove;
+
+    beforeAll(function() {
+
+      append = function() {
+        let args = Array.prototype.slice.apply(arguments);
+
+        args.forEach((elem) => document.body.appendChild(elem));
+      };
+
+      remove = function() {
+        let args = Array.prototype.slice.apply(arguments);
+
+        args.forEach((elem) => document.body.removeChild(elem));
+      };
+
+    });
+
+    it("calculates all coordinates", function() {
+      let area  = document.createElement("div");
+      let area2 = document.createElement("div");
+      let elements = {
+        nameArea: {
+          area: area
+        },
+        nameArea2: {
+          area: area2
+        }
+      };
+
+      append(area, area2);
+      roller._calcAllCoordinates(elements);
+
+      expect(elements.nameArea.pageY).toBeDefined();
+      expect(elements.nameArea2.pageY).toBeDefined();
+
+      remove(area, area2);
+    });
+
+  });
+
 }(window.Roller));
