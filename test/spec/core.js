@@ -18,6 +18,10 @@
       expect(roller.init).toBeDefined();
     });
 
+    it("initial value for the resized flag is null", function() {
+      expect(roller.resized).toBeNull();
+    });
+
   });
 
 }(window.Roller));
